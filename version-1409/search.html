@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索筛选-欧美高清影院</title>
+    <meta name="description" content="站内搜索欧美电影、最新电影、热播视频与高清正版影视内容。">
+    <meta name="keywords" content="搜索,筛选,欧美,视频,免费观看,最新电影,热播视频,高清播放,正版">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+        <a class="brand" href="./index.html" aria-label="欧美高清影院">
+            <span class="brand-mark">▶</span>
+            <span class="brand-text">欧美高清影院</span>
+        </a>
+        <nav class="desktop-nav" aria-label="主导航">
+            <a href="./index.html">首页</a>
+            <a href="./categories.html">分类</a>
+            <a href="./ranking.html">排行榜</a>
+            <a href="./categories/hot-movies.html">热门电影</a><a href="./categories/latest-series.html">最新剧集</a><a href="./categories/euro-america.html">欧美精选</a><a href="./categories/suspense-adventure.html">悬疑冒险</a><a href="./categories/love-drama.html">爱情剧情</a>
+        </nav>
+        <form class="header-search" action="./search.html" method="get">
+            <input type="search" name="q" placeholder="搜索视频..." autocomplete="off">
+            <button type="submit">搜索</button>
+        </form>
+        <button class="mobile-menu-button" type="button" aria-label="展开导航" aria-expanded="false">☰</button>
+    </div>
+    <div class="mobile-panel" hidden>
+        <form class="mobile-search" action="./search.html" method="get">
+            <input type="search" name="q" placeholder="搜索视频..." autocomplete="off">
+            <button type="submit">搜索</button>
+        </form>
+        <nav aria-label="移动端导航">
+            <a href="./index.html">首页</a>
+            <a href="./categories.html">分类总览</a>
+            <a href="./ranking.html">排行榜</a>
+            <a href="./categories/hot-movies.html">热门电影</a><a href="./categories/latest-series.html">最新剧集</a><a href="./categories/euro-america.html">欧美精选</a><a href="./categories/suspense-adventure.html">悬疑冒险</a><a href="./categories/love-drama.html">爱情剧情</a>
+        </nav>
+    </div>
+</header>
+<main class="page-main search-page">
+    <section class="page-hero compact-page-hero">
+        <span>Search</span>
+        <h1>搜索与筛选</h1>
+        <p>输入片名、地区、类型、标签或剧情关键词，即可在站内快速筛选适合观看的影片。</p>
+    </section>
+    <section class="section search-tools" aria-label="影片搜索筛选">
+        <form class="search-panel" action="./search.html" method="get">
+            <input id="movie-search-input" type="search" name="q" placeholder="输入关键词搜索" autocomplete="off">
+            <button type="submit">搜索</button>
+        </form>
+        <div class="search-filter-row">
+            <button type="button" class="active" data-search-category="all">全部分类</button>
+            <button type="button" data-search-category="hot-movies">热门电影</button><button type="button" data-search-category="latest-series">最新剧集</button><button type="button" data-search-category="euro-america">欧美精选</button><button type="button" data-search-category="suspense-adventure">悬疑冒险</button><button type="button" data-search-category="love-drama">爱情剧情</button><button type="button" data-search-category="fantasy-action">奇幻动作</button><button type="button" data-search-category="asian-choice">亚洲佳作</button><button type="button" data-search-category="classic-review">高分口碑</button><button type="button" data-search-category="family-life">生活纪实</button><button type="button" data-search-category="cinema-picks">影院精选</button>
+        </div>
+        <div class="search-selects">
+            <label>类型
+                <select id="type-filter">
+                    <option value="all">全部</option>
+                    <option value="电影">电影</option>
+                    <option value="剧">剧集</option>
+                </select>
+            </label>
+            <label>年份
+                <select id="year-filter">
+                    <option value="all">全部年份</option>
+                    <option value="2027">2027</option>
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select>
+            </label>
+            <label>排序
+                <select id="sort-filter">
+                    <option value="hot">热度优先</option>
+                    <option value="rating">评分优先</option>
+                    <option value="year">年份优先</option>
+                </select>
+            </label>
+        </div>
+    </section>
+    <section class="section">
+        <div class="movie-grid full-grid" id="search-results" aria-live="polite"></div>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="footer-grid">
+        <section>
+            <div class="footer-brand">欧美高清影院</div>
+            <p>专注于欧美地区影视作品的播放服务，提供高清正版资源，涵盖最新电影与热门剧集，满足不同用户需求。</p>
+        </section>
+        <section>
+            <h2>站内导航</h2>
+            <a href="./categories.html">分类总览</a>
+            <a href="./ranking.html">热门排行榜</a>
+            <a href="./search.html">搜索筛选</a>
+        </section>
+        <section>
+            <h2>服务内容</h2>
+            <a href="./about.html">关于我们</a>
+            <a href="./copyright.html">版权声明</a>
+            <a href="./privacy.html">隐私政策</a>
+        </section>
+        <section>
+            <h2>精选分类</h2>
+            <a href="./categories/euro-america.html">欧美精选</a>
+            <a href="./categories/classic-review.html">高分口碑</a>
+            <a href="./categories/hot-movies.html">热门电影</a>
+        </section>
+    </div>
+    <div class="footer-bottom">© 2026 欧美高清影院 · 高清正版影视内容每日更新</div>
+</footer>
+<script src="./assets/js/site.js" defer></script>
+<script src="./assets/js/search-index.js" defer></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?95df08bc498ee0333203841fd6fee1eb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
